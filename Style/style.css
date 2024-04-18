@@ -1,0 +1,93 @@
+body {
+    background-color: #2e1a47;
+}
+/* Items needed for homepage */
+#layout {
+    /* Id for the overall layout. Creates grid to organize containers */
+    display: grid;
+}
+
+.icon {
+    /* I want buttons with a gray backrgound that are centered with a lot of padding and small amount of margin */
+    background-color: #c8c9c7;
+    padding: 30px;
+    margin: 50px;
+    text-align: center;
+}
+.logo {
+    /* Creates a container for our logo. It should be on top and centered */
+    grid-row: 1/1;
+    text-align: center;
+}
+.menu {
+    /* Menu. Exists in second row of layout grid. Creates menu grid that auto resizes */
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+/* Places each button the grid in the correct posistion */
+#auto_pmcs {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+#settings {
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+#vis_assist {
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+#auto_assist {
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+/* Items needed for PMCS */
+#pmcs_menu {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+.pmcs_element {
+    margin: auto;
+}
+#status {
+    padding: auto;
+    background-color: green; /*This will be controlled by js in final to change based on scan status */
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+#fault_list {
+    height: 30%;
+    width: 30%;
+    background-color: #c8c9c7;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+#home {
+    background-color: #c8c9c7;
+    text-align: center;
+    grid-row: 3/3;
+    grid-column: 2/2;
+}
+.pmcs_button {
+    background-color: #f56600;
+    color: white;
+}
+#menu_pmcs_buttons {
+    grid-row: 3/3;
+    grid-column: 1/1;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#scan_again {
+    grid-column: 1/1;
+}
+#more_info {
+    grid-column: 2/2;
+}
+/* Items needed for outtaScope */
+#warning {
+    color: white;
+}
